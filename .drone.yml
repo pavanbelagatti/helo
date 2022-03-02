@@ -8,6 +8,9 @@ steps:
   commands:
   - go test
   - go build
+
+- name: docker  
+  image: plugins/docker
   settings:
     # registry: docker.io
     repo: pavansa/my-app-new
@@ -16,4 +19,4 @@ steps:
     password:
       from_secret: docker_password
     tags: 
-      - latest
+      - pavans
